@@ -1,28 +1,64 @@
+body{
+    background-color: rgb(58, 54, 54);
+}
 main{
     margin: auto;
-    max-width: 1000px;
+    background-color: #E6E6FA;
+    max-width: 1200px;
     border: 1px solid black;
 }
-h1{
-    text-align: center;
+header h1{
     margin:0px;
+    font-size: 50px;
 
 }
-p{
-    font-size: 100px;
+header{
+    padding: 50px 50px 5px 50px;
+}
+section{
+    padding: 5px 50px 50px 50px;
+}
+article{
+    border: 1px solid black;
+    width: 50%;
+}
+footer p{
+    text-align: center;
+}
+section{
+    
+}
+
+aside{
+    border: 1px solid black;
+    width: 40%;
+}
+article p{
+    text-align: center;
+}
+.cointainer div p{ 
     text-align: center;
     padding: 0px;
-    margin: 30px;
+    margin: 10px;
 }
 
 .container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .container div{
     border: 1px solid black;
-    width: 32%;
-    height: 280px;
+    width: 30%;
+    height: 150px;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 50px;
+}
+.jatekter{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
