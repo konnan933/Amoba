@@ -15,15 +15,35 @@ var nev_2 =""
 var szimbolum = "X";
 var lepesek = 1;
 var lepeslista = [];
+const nyeroHelyzetek = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
 
-
-
-
+function nyert_E(){
+    for (let index = 0; index < nyeroHelyzetek.length; index++) {
+        const nyerHelyzet = nyeroHelyzetek[index];
+        var a = (this).nyerHelyzet[0]('id');
+        var b = (this).nyerHelyzet[1]('id');
+        var c = (this).nyerHelyzet[2]('id');
+        if(a.innerHTML == b.innerHTML && b.innerHTML == c.innerHTML){
+            
+            return true;
+        }
+        console.log("asda")
+    }
+}
 
 function generalas(){
     var txt = "";
     for (let index = 0; index < 9; index++) {
-        txt +=`<div id="${index}"><p></p></div>`;
+        txt +=`<div  id="${index}"><p></p></div>`;
     }
     ID("generalas").innerHTML=txt;
     for (let index = 0; index < 9; index++) {    
@@ -33,12 +53,12 @@ function generalas(){
 function init() {
     generalas();
     nevadas();
+    nyert_E();
 }
 function letetel(){
     leptetes();
     console.log(event.target.id);
     var kattintott = event.target.id;
-    //nyerte();
     lepeslista.push(kattintott);
     ID(kattintott).innerHTML="<p>"+szimbolum+"</p>"
     ID(kattintott).removeEventListener("click",letetel)
@@ -61,10 +81,6 @@ function leptetes(){
         lepesek++;
     }
 }
-//function nyert_e(){
-//    for (let index = 0; index < lepeslista.length; index++) {
-//   }
-//}
 function nev1Submit(){
     return document.getElementById("j1");
 }
